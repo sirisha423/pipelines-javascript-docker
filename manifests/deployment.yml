@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sirishapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sirishapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sirishapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sirishapipelinesjavascriptdocker 
+          image: siritestacr.azurecr.io/sirishapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
